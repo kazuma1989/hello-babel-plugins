@@ -1,12 +1,11 @@
-module.exports = function identifierReversePlugin() {
+module.exports = function jsxAttributesE2EPlugin() {
   return {
-    name: "identifier reverse",
+    name: "JSX data attributes for E2E",
     visitor: {
-      Identifier(idPath) {
-        idPath.node.name = idPath.node.name
-          .split("")
-          .reverse()
-          .join("");
+      JSXAttribute(path) {
+        if (path.node.name.name !== "data-e2e") return;
+
+        path.remove();
       }
     }
   };
