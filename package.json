@@ -2,5 +2,9 @@
   "name": "hello-babel-plugins",
   "version": "1.0.0",
   "main": "./src/index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "babel-plugin-tester": "^8.0.1"
+  }
 }
